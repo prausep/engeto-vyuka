@@ -9,9 +9,14 @@ public class Main {   //System.out.println("nazdar\n".repeat(10)); zopakuje stri
 
         //Example1.clock(5); //omezená funkčnost
         //Example1.multiplicant(11, 8);
-        for (int i=3;i<100;i++) Example1.isPrime6K1(i);
         //Example1.isPrime6K1(6);
-        System.out.println(19%7);
+        //for (int i=3;i<100;i++) Example1.isPrime6K1(i);
+        //for (int i=1;i<11 ;i++) Example1.FibonacciF(i);
+        //Example1.FibonacciF(20);
+        //int[] ar = {3, 1, 5, 15};
+        //for (int i:ar) Example1.FizzBuzz(i);
+        Example1.toBinary(10);
+
     }
 }
 //

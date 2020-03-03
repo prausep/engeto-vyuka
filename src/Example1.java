@@ -1,3 +1,6 @@
+import java.time.LocalTime; // import the LocalTime class
+
+
 public class Example1 {
 
     public static void triangle(int row) {
@@ -109,7 +112,7 @@ public class Example1 {
     public static void isPrime6K1(int n){
         boolean is = true;
         if (n!=3) {
-            if (((n+1) % 6 == 0)|((n-1) % 6 ==0)) {    //když +1 nebo -1 je dělitelné 6 tak to může být prvočíslo.
+            if (((n+1) % 6 == 0)|((n-1) % 6 ==0)) {
                 for (int k=1; k<((n+1)/6); k++){
                     if ((n % (6*k+1) == 0)|(n % (6*k-1) == 0)) {
                         is = false;
@@ -118,11 +121,51 @@ public class Example1 {
                 }
             } else is=false;
         }
-
-
         if (is) System.out.println("Number "+n+" is prime.");
         else System.out.println("Number "+n+" isn't prime.");
     }
+    public static void FibonacciF(int n){
+        LocalTime StartT = LocalTime.now();
+        LocalTime EndT = LocalTime.now();
+        int first = 0;
+        int secound =1;
+        int swap;
+        if (n==1)
+            {System.out.println("Fibonacci "+n+"-th number is " +first);}
+        else if (n==2)
+            {System.out.println("Fibonacci "+n+"-th number is " +secound);}
+        else
+            {for (int i=2; i<n; i++){
+                swap=secound;
+                secound= first+secound;
+                first=swap;
+                //System.out.print(secound+", ");
+            }
+            System.out.println("Fibonacci "+n+"-th number is " +secound);
+        }
+        EndT=LocalTime.now();
+    }
+    public static void FizzBuzz(int n){
+        if (n % 3 == 0) System.out.print("Fizz");
+        if (n % 5 == 0) System.out.print("Buzz");
+        System.out.println();
 
+        /*
+        if (n % 3 == 0) {
+            if (n%5==0) System.out.println("FizzBuzz");
+                else System.out.println("Fizz");
+            } else if (n%5==0) System.out.println("Buzz");
+        else System.out.println();
+        */
+    }
+    public static void toBinary(int n){
+        //System.out.println("Binary is " + Integer.toBinaryString(n));
+
+
+
+
+    }
+
+    }
 
 }
