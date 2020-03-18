@@ -87,6 +87,7 @@ public class Example1 {
         }
 
     }
+    // mělo se to udělat přes .format("%-{num}s", ...) //printf f formátuje výstup
     public static void multiplicant (int iterace, int mn){
         int maxSpaceI = (int) Math.log10(iterace)+1;
         int maxSpaceN = (int) Math.log10(mn)+1; // zbytečné mn se nemění
@@ -98,6 +99,18 @@ public class Example1 {
             System.out.println("= "+(i*mn));
         }
     }
+
+    //String.format("|%20d|", 93);
+    /*public static void multiplicantF (int iterace, int mn){
+        for (int i=1;i<iterace+1;i++){
+            System.out.print(i);
+            for (int s=0;s<(int) maxSpaceI-Math.log10(i);s++) System.out.print(" ");
+            System.out.print("* "+mn);
+            for (int s=0;s<(int) maxSpaceN-Math.log10(mn);s++) System.out.print(" ");
+            System.out.println("= "+(i*mn));
+        }
+    }*/
+
     public static void isPrime(int n){
         boolean is = true;
         for (int i=2;i<(int)Math.sqrt(n);i++){
@@ -161,11 +174,8 @@ public class Example1 {
     public static void toBinary(int n){
         //System.out.println("Binary is " + Integer.toBinaryString(n));
 
-
-
-
     }
 
-    }
+
 
 }
